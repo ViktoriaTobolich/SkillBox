@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/ViktoriaTobolich/SkillBox/issues"
   },
-  "homepage": "https://github.com/ViktoriaTobolich/SkillBox#readme"
+  "homepage": "https://github.com/ViktoriaTobolich/SkillBox#readme",
+  "devDependencies": {
+    "webpack": "^5.39.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  }
 }
