@@ -1,3 +1,3 @@
 import ReactDOM from 'react-dom';
-
-ReactDOM.render(<div>Hello from React!</div>, document.getElementById('react_root'));
+import { Header } from './Header';
+ReactDOM.render(<Header />, document.getElementById('react_root'));
