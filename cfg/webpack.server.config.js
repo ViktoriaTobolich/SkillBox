@@ -1,6 +1,6 @@
 const path = require('path');
 const nodeExternals = require('webpack-node-externals');
-//const NODE_ENV = process.env.NODE_ENV;
+const NODE_ENV = "development";//process.env.NODE_ENV;
 
 module.exports = {
   mode: 'development',
@@ -12,14 +12,14 @@ module.exports = {
       filename: 'server.js'
   },
   resolve: {
-    extensions: [".ts", ".tsx", ".js"]
+    extensions: [".js", ".jsx", ".json"]
   },
   externals: [nodeExternals()],
 
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.[jt]sx?$/,
         use: [
           {
             loader: 'ts-loader',
@@ -28,7 +28,24 @@ module.exports = {
             }
           }
         ]
-      }
+      },
+      {
+        test: /\.css$/i,
+        loader: "css-loader",
+        options: {
+          modules: {
+            mode: "local",
+            // auto: true,
+            // exportGlobals: true,
+            localIdentName: "[path][name]__[local]--[hash:base64:5]",
+            // localIdentContext: path.resolve(__dirname, "src"),
+            // localIdentHashSalt: "my-custom-hash",
+            // namedExport: true,
+            //exportLocalsConvention: "camelCase",
+            exportOnlyLocals: true,
+          },
+        },
+      },
     ]
   },
 
