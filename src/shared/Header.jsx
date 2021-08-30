@@ -6,7 +6,7 @@ function HeaderComponent(){
 
   return(
 
-    <header ><h2 className={styles.test}>Hello from component</h2></header>
+    <header ><h2 className={styles.test}>Hello React</h2></header>
   );
 }
 
