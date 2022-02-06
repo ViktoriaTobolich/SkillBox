@@ -29,7 +29,7 @@ module.exports = {
     publicPath: '/static/'
   },
   resolve: {
-    extensions: [".js", ".jsx", ".json"],
+    extensions: [".ts",".js", ".jsx", ".json"],
     alias:{
       'react-dom': IS_DEV ? '@hot-loader/react-dom' : 'react-dom'
     }
